@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:sizer/sizer.dart';
 import 'package:task/utils/app_binding.dart';
 import 'package:task/utils/my_behavior.dart';
 import 'package:task/utils/navigation_utils/routes.dart';
@@ -22,27 +23,29 @@ class TaskApp extends StatelessWidget {
         DeviceOrientation.portraitDown,
       ],
     );
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialBinding: AppBinding(),
-      theme: ThemeData(
-        brightness: Brightness.light,
-        highlightColor: Colors.transparent,
-        splashColor: Colors.transparent,
-        disabledColor: Colors.transparent,
-      ),
-      initialRoute: Routes.homePage,
-      getPages: Routes.routes,
-      builder: (context, child) {
-        SizeUtils().init(context);
-        return Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: ScrollConfiguration(
-            behavior: MyBehavior(),
-            child: child!,
-          ),
-        );
-      },
-    );
+    return Sizer(builder: (context, orientation, deviceType) {
+      return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialBinding: AppBinding(),
+        theme: ThemeData(
+          brightness: Brightness.light,
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
+          disabledColor: Colors.transparent,
+        ),
+        initialRoute: Routes.homePage,
+        getPages: Routes.routes,
+        builder: (context, child) {
+          SizeUtils().init(context);
+          return Scaffold(
+            resizeToAvoidBottomInset: false,
+            body: ScrollConfiguration(
+              behavior: MyBehavior(),
+              child: child!,
+            ),
+          );
+        },
+      );
+    });
   }
 }
