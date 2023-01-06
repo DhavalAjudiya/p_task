@@ -38,8 +38,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   flutter_svg: ^1.1.6
-
-
+  syncfusion_flutter_datepicker: ^20.3.48
+  sizer: ^2.0.15
+  intl: ^0.17.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

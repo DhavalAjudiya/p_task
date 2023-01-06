@@ -8,7 +8,7 @@ mixin Routes {
   static List<GetPage<dynamic>> routes = [
     GetPage<dynamic>(
       name: homePage,
-      page: () => const HomePage(),
+      page: () => HomePage(),
       transition: defaultTransition,
     ),
   ];
