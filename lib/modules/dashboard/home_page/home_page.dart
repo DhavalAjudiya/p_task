@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:task/modules/dashboard/home_page/widget/header_image.dart';
 import 'package:task/res/app_colors.dart';
 import 'package:task/res/assets_path.dart';
 import 'package:task/res/strings_utils.dart';
 import 'package:task/utils/size_utils.dart';
 import 'package:task/widget/app_text.dart';
-import 'package:task/modules/dashboard/home_page/widget/header_image.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -67,6 +68,74 @@ class HomePage extends StatelessWidget {
                     isChange: true,
                   ),
                 ],
+              ),
+              SizedBox(
+                height: SizeUtils.horizontalBlockSize * 5,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: AppColor.whiteColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColor.background.withOpacity(0.2),
+                      blurRadius: 5,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: SizeUtils.horizontalBlockSize * 3,
+                    horizontal: SizeUtils.horizontalBlockSize * 4,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(
+                                top: SizeUtils.horizontalBlockSize * 2),
+                            child: AppText(
+                              AppString.newOrder,
+                              color: AppColor.textColor,
+                              fontWeight: FontWeight.w500,
+                              fontSize: SizeUtils.fSize_18(),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: SizeUtils.horizontalBlockSize * 2),
+                            child: AppText(
+                              AppString.sNewOrder,
+                              fontSize: SizeUtils.fSize_15(),
+                            ),
+                          ),
+                          AppText(
+                            AppString.time,
+                            color: AppColor.time,
+                            fontSize: SizeUtils.fSize_15(),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: SizeUtils.horizontalBlockSize * 2),
+                            child: const Icon(
+                              Icons.arrow_forward,
+                              color: AppColor.time,
+                            ),
+                          )
+                        ],
+                      ),
+                      CircleAvatar(
+                        radius: SizeUtils.horizontalBlockSize * 9,
+                        backgroundColor: AppColor.time,
+                        child: SvgPicture.asset(AssetsPath.newOrder),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),

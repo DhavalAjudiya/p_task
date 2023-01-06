@@ -31,7 +31,7 @@ class TaskApp extends StatelessWidget {
         splashColor: Colors.transparent,
         disabledColor: Colors.transparent,
       ),
-      initialRoute: Routes.homePage,
+      initialRoute: Routes.bottomBar,
       getPages: Routes.routes,
       builder: (context, child) {
         SizeUtils().init(context);
