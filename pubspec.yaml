@@ -41,6 +41,9 @@ dependencies:
   curved_nav_bar: ^0.0.2
 
 
+  syncfusion_flutter_datepicker: ^20.3.48
+  sizer: ^2.0.15
+  intl: ^0.17.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

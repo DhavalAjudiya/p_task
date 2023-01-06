@@ -1,0 +1,40 @@
+import 'dart:ui';
+
+class ColorRes {
+  static const Color whiteColor = Color(0xffffffff);
+  static const Color lightBlueColor = Color(0xffEAFBFF);
+  static const Color blueColor = Color(0xff0A78B8);
+  static const Color blueShadeColor = Color(0xff0FB5D8);
+  static const Color lightBlueShadeColor = Color(0xff00C7F3);
+  static const Color graphGradientColor = Color(0xff0074BE);
+  static const Color lightBlackColor = Color(0xffC9C9C9);
+  static const Color blackColor = Color(0xff000000);
+  static const Color darkBlackColor = Color(0xff444545);
+  static const Color darkBlueColor = Color(0xff4A4A68);
+  static const Color grayColor = Color(0xffA5A5A5);
+  static const Color indicatorColor = Color(0xffD9D9D9);
+  static const Color lightGrayColor = Color(0xffA2A2A2);
+  static const Color lightWhiteColor = Color(0xffD9D9D9);
+  static const Color greenColor = Color(0xff27AE60);
+  static const Color darkGreenColor = Color(0xff219653);
+  static const Color relaxedTextColor = Color(0xffE7E7E7);
+  static const Color lightTextColor = Color(0xffF2C94C);
+  static const Color backGroundColor1 = Color(0xffFFE8E8);
+  static const Color backGroundColor2 = Color(0xffE2F1F7);
+  static const Color backGroundColor3 = Color(0xffE3F5EE);
+  static const Color backGroundColor4 = Color(0xffFFF6EE);
+  static const Color backGroundColor5 = Color(0xffDFF9FF);
+  static const Color backGroundColor6 = Color(0xffFEECF9);
+  static const Color lightOrange = Color(0xffFDCCCC);
+  static const Color darkOrange = Color(0xffF2994A);
+  static const Color darkLightOrange = Color(0xffFDE7D5);
+  static const Color lightGreen = Color(0xff219653);
+  static const Color pinkColor = Color(0xffF40DB3);
+  static const Color hartRateCountColor1 = Color(0xffEAEAEA);
+  static const Color hartRateCountColor2 = Color(0xffF2C94C);
+  static const Color hartRateCountColor3 = Color(0xffDF7A20);
+  static const Color hartRateCountColor4 = Color(0xffB25F16);
+  static const Color hartRateCountColor5 = Color(0xffEB5757);
+  static const Color sleepClockColor = Color(0xffB1D4E9);
+  static const Color backGroundColorNew = Color(0xfff5f4f9);
+}
