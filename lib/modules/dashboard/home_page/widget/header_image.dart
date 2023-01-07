@@ -16,14 +16,14 @@ Widget imgContainer({
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-              color: AppColor.background.withOpacity(0.6),
-              blurRadius: 8,
-              spreadRadius: 1,
+              color: AppColor.background.withOpacity(0.2),
+              blurRadius: 10,
+              spreadRadius: 4,
             ),
           ]),
       child: Padding(
         padding:
-            isChange ? const EdgeInsets.all(8.0) : const EdgeInsets.all(5.0),
+            isChange ? const EdgeInsets.all(8.0) : const EdgeInsets.all(4.0),
         child: SvgPicture.asset(
           image!,
           height: isChange
