@@ -82,7 +82,8 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              const Flexible(
+              SizedBox(
+                height: SizeUtils.verticalBlockSize * 33,
                 child: OrderType(),
               ),
               Padding(
@@ -159,7 +160,7 @@ class HomePage extends StatelessWidget {
                                 Icons.arrow_forward,
                                 color: AppColor.time,
                               ),
-                            )
+                            ),
                           ],
                         ),
                         CircleAvatar(

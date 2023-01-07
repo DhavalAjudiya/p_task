@@ -88,101 +88,99 @@ class OrderType extends StatelessWidget {
                   ),
                 ),
               ),
-              Flexible(
-                child: Container(
-                  alignment: Alignment.centerLeft,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: AppColor.orders,
-                    borderRadius: BorderRadius.circular(10),
+              Container(
+                alignment: Alignment.centerLeft,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: AppColor.orders,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    top: SizeUtils.horizontalBlockSize * 11,
+                    bottom: SizeUtils.horizontalBlockSize * 6,
+                    left: SizeUtils.horizontalBlockSize * 6,
+                    right: SizeUtils.horizontalBlockSize * 8,
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                      top: SizeUtils.horizontalBlockSize * 11,
-                      bottom: SizeUtils.horizontalBlockSize * 6,
-                      left: SizeUtils.horizontalBlockSize * 6,
-                      right: SizeUtils.horizontalBlockSize * 8,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            CircleAvatar(
-                              radius: SizeUtils.horizontalBlockSize * 17,
-                              backgroundColor: AppColor.backgroundImage,
-                              child: SvgPicture.asset(
-                                AssetsPath.orders,
-                              ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          CircleAvatar(
+                            radius: SizeUtils.horizontalBlockSize * 17,
+                            backgroundColor: AppColor.backgroundImage,
+                            child: SvgPicture.asset(
+                              AssetsPath.orders,
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: AppColor.whiteColor,
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.black.withOpacity(0.1),
-                                      blurRadius: 15,
-                                      spreadRadius: 5,
-                                      offset: const Offset(2, 10)),
-                                ],
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Stack(
-                                clipBehavior: Clip.none,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                      top: SizeUtils.horizontalBlockSize * 1,
-                                      bottom: SizeUtils.horizontalBlockSize * 8,
-                                      left: SizeUtils.horizontalBlockSize * 5,
-                                      right: SizeUtils.horizontalBlockSize * 5,
-                                    ),
-                                    child: Column(
-                                      children: [
-                                        richText(
-                                          text_1: AppString.pending_1,
-                                          text_2: AppString.pending_2,
-                                          color_1: AppColor.textColor,
-                                          color_2: AppColor.textColor
-                                              .withOpacity(0.3),
-                                          fontWeight_1: FontWeight.w600,
-                                          fontWeight_2: FontWeight.w400,
-                                          fontSize_1: SizeUtils.fSize_20(),
-                                          fontSize_2: SizeUtils.fSize_12(),
-                                        ),
-                                        AppText(
-                                          AppString.pending_3,
-                                          color: AppColor.textColor,
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: SizeUtils.fSize_14(),
-                                        ),
-                                      ],
-                                    ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColor.whiteColor,
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 15,
+                                    spreadRadius: 5,
+                                    offset: const Offset(2, 10)),
+                              ],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Stack(
+                              clipBehavior: Clip.none,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    top: SizeUtils.horizontalBlockSize * 1,
+                                    bottom: SizeUtils.horizontalBlockSize * 8,
+                                    left: SizeUtils.horizontalBlockSize * 5,
+                                    right: SizeUtils.horizontalBlockSize * 5,
                                   ),
-                                  Positioned(
-                                    bottom: SizeUtils.horizontalBlockSize * -6,
-                                    left: SizeUtils.horizontalBlockSize * 5.5,
-                                    child: rowImage(
-                                      isChange: true,
-                                      backgroundColor: AppColor.imageBorder,
-                                      backgroundImage_1: AssetsPath.aliya,
-                                      backgroundImage_2: AssetsPath.raj,
-                                    ),
+                                  child: Column(
+                                    children: [
+                                      richText(
+                                        text_1: AppString.pending_1,
+                                        text_2: AppString.pending_2,
+                                        color_1: AppColor.textColor,
+                                        color_2:
+                                            AppColor.textColor.withOpacity(0.3),
+                                        fontWeight_1: FontWeight.w600,
+                                        fontWeight_2: FontWeight.w400,
+                                        fontSize_1: SizeUtils.fSize_20(),
+                                        fontSize_2: SizeUtils.fSize_12(),
+                                      ),
+                                      AppText(
+                                        AppString.pending_3,
+                                        color: AppColor.textColor,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: SizeUtils.fSize_14(),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                        const Spacer(),
-                        button(
-                          text: AppString.orders,
-                          color: AppColor.ordersBut,
-                        ),
-                      ],
-                    ),
+                                ),
+                                Positioned(
+                                  bottom: SizeUtils.horizontalBlockSize * -6,
+                                  left: SizeUtils.horizontalBlockSize * 5.5,
+                                  child: rowImage(
+                                    isChange: true,
+                                    backgroundColor: AppColor.imageBorder,
+                                    backgroundImage_1: AssetsPath.aliya,
+                                    backgroundImage_2: AssetsPath.raj,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                      const Spacer(),
+                      button(
+                        text: AppString.orders,
+                        color: AppColor.ordersBut,
+                      ),
+                    ],
                   ),
                 ),
               ),
