@@ -25,155 +25,160 @@ class HomePage extends StatelessWidget {
           padding: EdgeInsets.only(
             top: SizeUtils.horizontalBlockSize * 3,
           ),
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: SizeUtils.horizontalBlockSize * 3,
-                ),
-                child: Row(
-                  children: [
-                    imgContainer(
-                      image: AssetsPath.manu,
-                    ),
-                    const Spacer(),
-                    imgContainer(
-                      image: AssetsPath.fav,
-                      padding: SizeUtils.horizontalBlockSize * 5,
-                    ),
-                    imgContainer(
-                      image: AssetsPath.notification,
-                      padding: SizeUtils.horizontalBlockSize * 5,
-                    ),
-                    imgContainer(
-                      image: AssetsPath.user,
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    left: SizeUtils.horizontalBlockSize * 3,
-                    right: SizeUtils.horizontalBlockSize * 3,
-                    top: SizeUtils.horizontalBlockSize * 8),
-                child: Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        AppText(
-                          AppString.headerText,
-                          color: AppColor.textColor,
-                          fontWeight: FontWeight.w500,
-                          fontSize: SizeUtils.fSize_20(),
-                        ),
-                        AppText(
-                          AppString.headerSubtext,
-                          color: AppColor.textColor.withOpacity(0.7),
-                          fontSize: SizeUtils.fSize_14(),
-                        ),
-                      ],
-                    ),
-                    const Spacer(),
-                    imgContainer(
-                      image: AssetsPath.search,
-                      isChange: true,
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: SizeUtils.verticalBlockSize * 33,
-                child: OrderType(),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(
                     horizontal: SizeUtils.horizontalBlockSize * 3,
-                    vertical: SizeUtils.horizontalBlockSize * 1),
-                child: CommonDatePicker(
-                  onSelectionChanged: (args) {
-                    SchedulerBinding.instance.addPostFrameCallback((duration) {
-                      workoutController.pushUpDate.value =
-                          DateFormat('dd, MMMM yyyy')
-                              .format(args.value)
-                              .toString();
-                      print('date--->${workoutController.pushUpDate.value}');
-                    });
-                  },
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: SizeUtils.horizontalBlockSize * 3,
-                  horizontal: SizeUtils.horizontalBlockSize * 4,
-                ),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: AppColor.whiteColor,
-                    boxShadow: [
-                      BoxShadow(
-                        color: AppColor.background.withOpacity(0.2),
-                        blurRadius: 5,
-                        spreadRadius: 1,
+                  ),
+                  child: Row(
+                    children: [
+                      imgContainer(
+                        image: AssetsPath.manu,
+                      ),
+                      const Spacer(),
+                      imgContainer(
+                        image: AssetsPath.fav,
+                        padding: SizeUtils.horizontalBlockSize * 5,
+                      ),
+                      imgContainer(
+                        image: AssetsPath.notification,
+                        padding: SizeUtils.horizontalBlockSize * 5,
+                      ),
+                      imgContainer(
+                        image: AssetsPath.user,
                       ),
                     ],
-                    borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      vertical: SizeUtils.horizontalBlockSize * 3,
-                      horizontal: SizeUtils.horizontalBlockSize * 4,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  top: SizeUtils.horizontalBlockSize * 2),
-                              child: AppText(
-                                AppString.newOrder,
-                                color: AppColor.textColor,
-                                fontWeight: FontWeight.w500,
-                                fontSize: SizeUtils.fSize_18(),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: SizeUtils.horizontalBlockSize * 2),
-                              child: AppText(
-                                AppString.sNewOrder,
-                                fontSize: SizeUtils.fSize_15(),
-                              ),
-                            ),
-                            AppText(
-                              AppString.time,
-                              color: AppColor.time,
-                              fontSize: SizeUtils.fSize_15(),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: SizeUtils.horizontalBlockSize * 2),
-                              child: const Icon(
-                                Icons.arrow_forward,
-                                color: AppColor.time,
-                              ),
-                            ),
-                          ],
-                        ),
-                        CircleAvatar(
-                          radius: SizeUtils.horizontalBlockSize * 9,
-                          backgroundColor: AppColor.time,
-                          child: SvgPicture.asset(AssetsPath.newOrder),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: SizeUtils.horizontalBlockSize * 3,
+                      right: SizeUtils.horizontalBlockSize * 3,
+                      top: SizeUtils.horizontalBlockSize * 8),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          AppText(
+                            AppString.headerText,
+                            color: AppColor.textColor,
+                            fontWeight: FontWeight.w500,
+                            fontSize: SizeUtils.fSize_20(),
+                          ),
+                          AppText(
+                            AppString.headerSubtext,
+                            color: AppColor.textColor.withOpacity(0.7),
+                            fontSize: SizeUtils.fSize_14(),
+                          ),
+                        ],
+                      ),
+                      const Spacer(),
+                      imgContainer(
+                        image: AssetsPath.search,
+                        isChange: true,
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: SizeUtils.verticalBlockSize * 33,
+                  child: OrderType(),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: SizeUtils.horizontalBlockSize * 3,
+                      vertical: SizeUtils.horizontalBlockSize * 1),
+                  child: CommonDatePicker(
+                    onSelectionChanged: (args) {
+                      SchedulerBinding.instance
+                          .addPostFrameCallback((duration) {
+                        workoutController.pushUpDate.value =
+                            DateFormat('dd, MMMM yyyy')
+                                .format(args.value)
+                                .toString();
+                        print('date--->${workoutController.pushUpDate.value}');
+                      });
+                    },
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: SizeUtils.horizontalBlockSize * 3,
+                    horizontal: SizeUtils.horizontalBlockSize * 4,
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: AppColor.whiteColor,
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColor.background.withOpacity(0.2),
+                          blurRadius: 5,
+                          spreadRadius: 1,
                         ),
                       ],
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: SizeUtils.horizontalBlockSize * 3,
+                        horizontal: SizeUtils.horizontalBlockSize * 4,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: SizeUtils.horizontalBlockSize * 2),
+                                child: AppText(
+                                  AppString.newOrder,
+                                  color: AppColor.textColor,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: SizeUtils.fSize_18(),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    vertical:
+                                        SizeUtils.horizontalBlockSize * 2),
+                                child: AppText(
+                                  AppString.sNewOrder,
+                                  fontSize: SizeUtils.fSize_15(),
+                                ),
+                              ),
+                              AppText(
+                                AppString.time,
+                                color: AppColor.time,
+                                fontSize: SizeUtils.fSize_15(),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    vertical:
+                                        SizeUtils.horizontalBlockSize * 2),
+                                child: const Icon(
+                                  Icons.arrow_forward,
+                                  color: AppColor.time,
+                                ),
+                              ),
+                            ],
+                          ),
+                          CircleAvatar(
+                            radius: SizeUtils.horizontalBlockSize * 9,
+                            backgroundColor: AppColor.time,
+                            child: SvgPicture.asset(AssetsPath.newOrder),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
