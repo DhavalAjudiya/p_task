@@ -6,6 +6,7 @@ class AssetsPath {
   static const String fav = '${appImage}fav.svg';
   static const String notification = '${appImage}notification.svg';
   static const String user = '${appImage}user.svg';
+  // static const String user = '${appImage}user.png';
   static const String search = '${appImage}search.svg';
   static const String newOrder = '${appImage}neworder.svg';
   static const String home = '${appImage}home.svg';

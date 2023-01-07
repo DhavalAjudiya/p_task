@@ -4,7 +4,7 @@ import 'package:task/res/app_colors.dart';
 import 'package:task/utils/size_utils.dart';
 
 Widget imgContainer({
-  String? image,
+  String image = "",
   double? padding,
   bool isChange = false,
 }) {
@@ -25,7 +25,7 @@ Widget imgContainer({
         padding:
             isChange ? const EdgeInsets.all(8.0) : const EdgeInsets.all(4.0),
         child: SvgPicture.asset(
-          image!,
+          image,
           height: isChange
               ? SizeUtils.horizontalBlockSize * 10
               : SizeUtils.horizontalBlockSize * 8,

@@ -17,4 +17,5 @@ class AppColor {
   static const viewCustomerBut = Color(0xFFCE316A);
   static const imageBorder = Color(0xFFeb4b44);
   static const imageBorder_3 = Color(0xFF2CE2FF);
+  static const imageDot = Color(0xFF12B828);
 }
