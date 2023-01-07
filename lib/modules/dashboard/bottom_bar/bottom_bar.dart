@@ -5,10 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task/modules/dashboard/customers/customber.dart';
 import 'package:task/modules/dashboard/home_page/home_page.dart';
-import 'package:task/modules/dashboard/khata/customber.dart';
-import 'package:task/modules/dashboard/orders/customber.dart';
+import 'package:task/modules/dashboard/khata/khata.dart';
+import 'package:task/modules/dashboard/orders/orders.dart';
 import 'package:task/res/app_colors.dart';
 import 'package:task/res/assets_path.dart';
+import 'package:task/res/strings_utils.dart';
 import 'package:task/utils/size_utils.dart';
 
 class BottomBar extends StatelessWidget {
@@ -40,29 +41,29 @@ class BottomBar extends StatelessWidget {
             FABBottomAppBarItem(
               activeIcon: SvgPicture.asset(AssetsPath.home),
               inActiveIcon: SvgPicture.asset(AssetsPath.home),
-              text: 'Home',
+              text: AppString.home,
             ),
             FABBottomAppBarItem(
               activeIcon: SvgPicture.asset(AssetsPath.custom),
               inActiveIcon: SvgPicture.asset(AssetsPath.custom),
-              text: 'Customers',
+              text: AppString.customers,
             ),
             FABBottomAppBarItem(
               activeIcon: SvgPicture.asset(AssetsPath.khata),
               inActiveIcon: SvgPicture.asset(AssetsPath.khata),
-              text: 'Khata',
+              text: AppString.khata,
             ),
             FABBottomAppBarItem(
               activeIcon: SvgPicture.asset(AssetsPath.order),
               inActiveIcon: SvgPicture.asset(AssetsPath.order),
-              text: 'Orders',
+              text: AppString.orders,
             ),
           ],
-          bodyItems: const [
+          bodyItems: [
             HomePage(),
-            Customers(),
-            Khata(),
-            Orders(),
+            const Customers(),
+            const Khata(),
+            const Orders(),
           ],
         ),
       ),

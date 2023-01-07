@@ -16,9 +16,9 @@ Widget imgContainer({
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-              color: AppColor.background.withOpacity(0.6),
-              blurRadius: 8,
-              spreadRadius: 1,
+              color: AppColor.background.withOpacity(0.2),
+              blurRadius: 10,
+              spreadRadius: 4,
             ),
           ]),
       child: Padding(

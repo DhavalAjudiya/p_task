@@ -12,4 +12,14 @@ class AssetsPath {
   static const String custom = '${appImage}custom.svg';
   static const String khata = '${appImage}khata.svg';
   static const String order = '${appImage}order.svg';
+  static const String orders = '${appImage}orders.svg';
+  static const String newCustomer = '${appImage}newcostomer.svg';
+  static const String deliver = '${appImage}deliver.svg';
+  static const String salman = '${appImage}salman.png';
+  static const String raj = '${appImage}raj.png';
+  static const String chaki = '${appImage}chaki.png';
+  static const String aliya = '${appImage}aliya.png';
+  static const String madhuri = '${appImage}madhuri.png';
+  static const String up = '${appImage}up.png';
+  static const String graph = '${appImage}graph.png';
 }
