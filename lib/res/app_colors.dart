@@ -18,4 +18,5 @@ class AppColor {
   static const imageBorder = Color(0xFFeb4b44);
   static const imageBorder_3 = Color(0xFF2CE2FF);
   static const imageDot = Color(0xFF12B828);
+  static const day = Color(0xFFC5D6FC);
 }

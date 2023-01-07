@@ -291,8 +291,8 @@ class _CommonDatePickerState extends State<CommonDatePicker> {
             child: Text(
               DateFormat('EEE').format((details.date)),
               style: const TextStyle(
-                  color: AppColor.calendar,
-                  fontWeight: FontWeight.w400,
+                  color: AppColor.day,
+                  fontWeight: FontWeight.w500,
                   fontSize: 14),
             ),
           ),
@@ -302,7 +302,7 @@ class _CommonDatePickerState extends State<CommonDatePicker> {
               details.date.day.toString(),
               textAlign: TextAlign.center,
               style: const TextStyle(
-                  color: AppColor.calendar,
+                  color: AppColor.textColor,
                   fontWeight: FontWeight.w400,
                   fontSize: 16),
             ),
