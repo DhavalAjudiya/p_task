@@ -182,7 +182,7 @@ class HomePage extends StatelessWidget {
 
   //---------
   Widget button({
-    final String? text,
+    final String text = "",
     final Color? color,
   }) {
     return Container(
@@ -198,7 +198,7 @@ class HomePage extends StatelessWidget {
           // horizontal: SizeUtils.horizontalBlockSize * 5,
         ),
         child: AppText(
-          text!,
+          text,
           color: AppColor.whiteColor,
           fontSize: SizeUtils.fSize_17(),
         ),

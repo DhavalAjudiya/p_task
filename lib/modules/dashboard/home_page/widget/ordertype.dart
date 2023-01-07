@@ -122,7 +122,7 @@ class OrderType extends StatelessWidget {
                 ),
               ),
               Positioned(
-                right: SizeUtils.horizontalBlockSize * 15,
+                right: SizeUtils.horizontalBlockSize * 8,
                 top: SizeUtils.horizontalBlockSize * -3,
                 child: Container(
                   decoration: BoxDecoration(
@@ -186,7 +186,6 @@ class OrderType extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
         ),
@@ -239,8 +238,8 @@ class OrderType extends StatelessWidget {
                           children: [
                             Padding(
                               padding: EdgeInsets.only(
-                                top: SizeUtils.horizontalBlockSize * 6,
-                                right: SizeUtils.horizontalBlockSize * 9,
+                                top: SizeUtils.horizontalBlockSize * 7,
+                                right: SizeUtils.horizontalBlockSize * 5,
                               ),
                               child: Container(
                                 decoration: BoxDecoration(
@@ -288,46 +287,52 @@ class OrderType extends StatelessWidget {
                               ),
                             ),
                             const Spacer(),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: AppColor.whiteColor,
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.black.withOpacity(0.1),
-                                      blurRadius: 15,
-                                      spreadRadius: 5,
-                                      offset: const Offset(2, 10)),
-                                ],
-                                borderRadius: BorderRadius.circular(12),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                left: SizeUtils.horizontalBlockSize * 5,
                               ),
-                              child: Padding(
-                                padding: EdgeInsets.only(
-                                  top: SizeUtils.horizontalBlockSize * 6,
-                                  bottom: SizeUtils.horizontalBlockSize * 2,
-                                  left: SizeUtils.horizontalBlockSize * 5,
-                                  right: SizeUtils.horizontalBlockSize * 5,
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    richText(
-                                      text_1: AppString.sSPending_1,
-                                      text_2: AppString.sSPending_2,
-                                      color_1: AppColor.textColor,
-                                      color_2:
-                                          AppColor.textColor.withOpacity(0.3),
-                                      fontWeight_1: FontWeight.w600,
-                                      fontWeight_2: FontWeight.w400,
-                                      fontSize_1: SizeUtils.fSize_20(),
-                                      fontSize_2: SizeUtils.fSize_12(),
-                                    ),
-                                    AppText(
-                                      AppString.sSPending_3,
-                                      color: AppColor.textColor,
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: SizeUtils.fSize_16(),
-                                    ),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: AppColor.whiteColor,
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black.withOpacity(0.1),
+                                        blurRadius: 15,
+                                        spreadRadius: 5,
+                                        offset: const Offset(2, 10)),
                                   ],
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.only(
+                                    top: SizeUtils.horizontalBlockSize * 5,
+                                    bottom: SizeUtils.horizontalBlockSize * 2,
+                                    left: SizeUtils.horizontalBlockSize * 5,
+                                    right: SizeUtils.horizontalBlockSize * 5,
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      richText(
+                                        text_1: AppString.sSPending_1,
+                                        text_2: AppString.sSPending_2,
+                                        color_1: AppColor.textColor,
+                                        color_2:
+                                            AppColor.textColor.withOpacity(0.3),
+                                        fontWeight_1: FontWeight.w600,
+                                        fontWeight_2: FontWeight.w400,
+                                        fontSize_1: SizeUtils.fSize_20(),
+                                        fontSize_2: SizeUtils.fSize_12(),
+                                      ),
+                                      AppText(
+                                        AppString.sSPending_3,
+                                        color: AppColor.textColor,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: SizeUtils.fSize_16(),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -339,7 +344,7 @@ class OrderType extends StatelessWidget {
                 ),
               ),
               Positioned(
-                right: SizeUtils.horizontalBlockSize * 15,
+                right: SizeUtils.horizontalBlockSize * 10,
                 top: SizeUtils.horizontalBlockSize * -3,
                 child: Container(
                   decoration: BoxDecoration(
@@ -399,7 +404,6 @@ class OrderType extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
         ),
@@ -459,7 +463,7 @@ class OrderType extends StatelessWidget {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.only(
-                                    top: SizeUtils.horizontalBlockSize * 6,
+                                    top: SizeUtils.horizontalBlockSize * 9,
                                     left: SizeUtils.horizontalBlockSize * 10,
                                   ),
                                   child: Container(
@@ -477,7 +481,7 @@ class OrderType extends StatelessWidget {
                                     ),
                                     child: Padding(
                                       padding: EdgeInsets.only(
-                                        top: SizeUtils.horizontalBlockSize * 3,
+                                        top: SizeUtils.horizontalBlockSize * 2,
                                         bottom:
                                             SizeUtils.horizontalBlockSize * 0,
                                         left: SizeUtils.horizontalBlockSize * 5,
@@ -540,7 +544,7 @@ class OrderType extends StatelessWidget {
                                         child: Padding(
                                           padding: EdgeInsets.only(
                                             top: SizeUtils.horizontalBlockSize *
-                                                6,
+                                                5,
                                             bottom:
                                                 SizeUtils.horizontalBlockSize *
                                                     2,
@@ -555,18 +559,26 @@ class OrderType extends StatelessWidget {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              richText(
-                                                text_1: AppString.vPending_1,
-                                                text_2: AppString.vPending_2,
-                                                color_1: AppColor.textColor,
-                                                color_2: AppColor.textColor
-                                                    .withOpacity(0.3),
-                                                fontWeight_1: FontWeight.w600,
-                                                fontWeight_2: FontWeight.w400,
-                                                fontSize_1:
-                                                    SizeUtils.fSize_20(),
-                                                fontSize_2:
-                                                    SizeUtils.fSize_12(),
+                                              Column(
+                                                children: [
+                                                  richText(
+                                                    text_1:
+                                                        AppString.vPending_1,
+                                                    text_2:
+                                                        AppString.vPending_2,
+                                                    color_1: AppColor.textColor,
+                                                    color_2: AppColor.textColor
+                                                        .withOpacity(0.3),
+                                                    fontWeight_1:
+                                                        FontWeight.w600,
+                                                    fontWeight_2:
+                                                        FontWeight.w400,
+                                                    fontSize_1:
+                                                        SizeUtils.fSize_20(),
+                                                    fontSize_2:
+                                                        SizeUtils.fSize_12(),
+                                                  ),
+                                                ],
                                               ),
                                               AppText(
                                                 AppString.vPending_3,
@@ -584,6 +596,7 @@ class OrderType extends StatelessWidget {
                                         right:
                                             SizeUtils.horizontalBlockSize * -1,
                                         child: rowImage(
+                                          isDot: true,
                                           backgroundColor:
                                               AppColor.imageBorder_3,
                                           backgroundImage_1: AssetsPath.chaki,
@@ -602,7 +615,7 @@ class OrderType extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    right: SizeUtils.horizontalBlockSize * 15,
+                    right: SizeUtils.horizontalBlockSize * 8,
                     top: SizeUtils.horizontalBlockSize * -3,
                     child: Container(
                       decoration: BoxDecoration(
@@ -622,7 +635,7 @@ class OrderType extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.only(
                               top: SizeUtils.horizontalBlockSize * 2,
-                              bottom: SizeUtils.horizontalBlockSize * 8,
+                              bottom: SizeUtils.horizontalBlockSize * 7,
                               left: SizeUtils.horizontalBlockSize * 4,
                               right: SizeUtils.horizontalBlockSize * 4,
                             ),
@@ -648,8 +661,8 @@ class OrderType extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            bottom: SizeUtils.horizontalBlockSize * -6,
-                            left: SizeUtils.horizontalBlockSize * 8,
+                            bottom: SizeUtils.horizontalBlockSize * -5,
+                            left: SizeUtils.horizontalBlockSize * 7.5,
                             child: rowImage(
                               isChange: false,
                               isAdd: false,
@@ -663,7 +676,6 @@ class OrderType extends StatelessWidget {
                       ),
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -674,7 +686,7 @@ class OrderType extends StatelessWidget {
   }
 
   Widget button({
-    final String? text,
+    final String text = " ",
     final Color? color,
     final FontWeight? fontWeight,
     final double? fontSize,
@@ -693,7 +705,7 @@ class OrderType extends StatelessWidget {
           // horizontal: SizeUtils.horizontalBlockSize * 5,
         ),
         child: AppText(
-          text!,
+          text,
           color: AppColor.whiteColor,
           fontSize: fontSize ?? SizeUtils.fSize_17(),
           fontWeight: fontWeight ?? FontWeight.normal,
@@ -749,6 +761,7 @@ class OrderType extends StatelessWidget {
   Widget rowImage({
     bool isChange = false,
     bool isAdd = true,
+    bool isDot = false,
     final Color? backgroundColor,
     final String backgroundImage_1 = "",
     final String backgroundImage_2 = "",
@@ -801,6 +814,36 @@ class OrderType extends StatelessWidget {
                         color: AppColor.textColor,
                         size: SizeUtils.horizontalBlockSize * 3.5,
                       ),
+                    ),
+            ),
+            Positioned(
+              left: SizeUtils.horizontalBlockSize * 7,
+              top: SizeUtils.horizontalBlockSize * 9,
+              child: isDot == false
+                  ? const SizedBox()
+                  : CircleAvatar(
+                      radius: SizeUtils.horizontalBlockSize * 1.2,
+                      backgroundColor: AppColor.imageDot,
+                    ),
+            ),
+            Positioned(
+              left: SizeUtils.horizontalBlockSize * 16.5,
+              top: SizeUtils.horizontalBlockSize * 9,
+              child: isDot == false
+                  ? const SizedBox()
+                  : CircleAvatar(
+                      radius: SizeUtils.horizontalBlockSize * 1.2,
+                      backgroundColor: AppColor.imageDot,
+                    ),
+            ),
+            Positioned(
+              left: SizeUtils.horizontalBlockSize * 26,
+              top: SizeUtils.horizontalBlockSize * 9,
+              child: isDot == false
+                  ? const SizedBox()
+                  : CircleAvatar(
+                      radius: SizeUtils.horizontalBlockSize * 1.2,
+                      backgroundColor: AppColor.imageDot,
                     ),
             ),
           ],
